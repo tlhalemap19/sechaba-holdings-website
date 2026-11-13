@@ -1,0 +1,1 @@
+(()=>{const header=document.querySelector('header');const update=()=>document.documentElement.style.setProperty('--nav-height',header.getBoundingClientRect().height+'px');update();if('ResizeObserver' in window)new ResizeObserver(update).observe(header);window.addEventListener('resize',update);window.addEventListener('load',update);})();

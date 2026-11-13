@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+        name="description"
+        content="Sechaba Holdings construction, civil works and allied services in Gauteng. Contact our team to discuss your project and request a quotation."
+    >
+
+    <title>Contact &amp; Quotations | Sechaba Holdings</title>
+
+    <link rel="stylesheet" href="assets/style.css">
+
+    <style>
+        /* Hide the spam-prevention field from human visitors. */
+        .form-honeypot {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .form-status {
+            margin-top: 18px;
+            padding: 14px 16px;
+            border-radius: 4px;
+            line-height: 1.6;
+        }
+
+        .form-status:empty {
+            display: none;
+        }
+
+        .form-status.success {
+            color: #175432;
+            background: #e8f5ec;
+            border: 1px solid #a7d5b4;
+        }
+
+        .form-status.error {
+            color: #8b2424;
+            background: #fff0f0;
+            border: 1px solid #e7b0b0;
+        }
+
+        .form-status.pending {
+            color: #15332f;
+            background: #eef2ed;
+            border: 1px solid #c9d5cb;
+        }
+
+        button[type="submit"]:disabled {
+            opacity: 0.7;
+            cursor: wait;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <nav aria-label="Main navigation">
+                <a class="brand" href="index.html">
+                    SECHABA
+                    <small>HOLDINGS</small>
+                </a>
+
+                <div class="links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="about-gallery.html">About &amp; Gallery</a>
+                    <a href="contact.html" aria-current="page">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <script src="assets/navigation.js"></script>
+
+    <main>
+        <section class="hero">
+            <div class="wrap">
+                <div class="eyebrow">Sechaba Holdings</div>
+
+                <h1>Contact our team</h1>
+
+                <p>Discuss your project and request a quotation.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="wrap split">
+                <div>
+                    <h2>Sechaba Holdings</h2>
+
+                    <a class="contact-link" href="tel:+27736699341">
+                        073 669 9341
+                    </a>
+
+                    <a class="contact-link" href="tel:+27785510450">
+                        078 551 0450
+                    </a>
+
+                    <a
+                        class="contact-link"
+                        href="mailto:sechabaholdingsltd@gmail.com"
+                    >
+                        sechabaholdingsltd@gmail.com
+                    </a>
+
+                    <h3>Our location</h3>
+
+                    <p>Remote — contact our team to discuss your project location.</p>
+
+                    <p class="intro">
+                        Include your location, type of work and preferred
+                        timeframe when contacting us.
+                    </p>
+                </div>
+
+                <form
+                    id="quotation-form"
+                    name="quotation"
+                    class="card"
+                    method="POST"
+                    action="/contact.html"
+                    data-netlify="true"
+                    netlify-honeypot="bot-field"
+                >
+                    <input
+                        type="hidden"
+                        name="form-name"
+                        value="quotation"
+                    >
+
+                    <p class="form-honeypot" aria-hidden="true">
+                        <label for="bot-field">
+                            Leave this field empty.
+                        </label>
+
+                        <input
+                            id="bot-field"
+                            name="bot-field"
+                            type="text"
+                            tabindex="-1"
+                            autocomplete="off"
+                        >
+                    </p>
+
+                    <h2>Request a quotation</h2>
+
+                    <label for="name">Your name</label>
+                    <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        required
+                        autocomplete="name"
+                        maxlength="120"
+                    >
+
+                    <label for="email">Email address</label>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        required
+                        autocomplete="email"
+                        maxlength="254"
+                    >
+
+                    <label for="phone">Phone (optional)</label>
+                    <input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        autocomplete="tel"
+                        maxlength="40"
+                    >
+
+                    <label for="message">
+                        Project details and location
+                    </label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        required
+                        maxlength="5000"
+                        rows="6"
+                    ></textarea>
+
+                    <p class="note" id="form-description">
+                        Let’s bring your project to life. Share your
+                        requirements, location and preferred timeline
+                        so the Sechaba Holdings team can discuss a
+                        tailored quotation with you.
+                    </p>
+
+                    <p class="note">
+                        Your contact details and project information
+                        will be used to respond to your enquiry.
+                        Please do not include sensitive personal information.
+                    </p>
+
+                    <button
+                        id="submit-button"
+                        class="button"
+                        type="submit"
+                        aria-describedby="form-description"
+                    >
+                        Submit
+                    </button>
+
+                    <p
+                        id="form-status"
+                        class="form-status"
+                        role="status"
+                        aria-live="polite"
+                        aria-atomic="true"
+                    ></p>
+
+                    <noscript>
+                        <p class="note">
+                            JavaScript is disabled. You can still submit
+                            this form, but the confirmation will appear
+                            on a separate page.
+                        </p>
+                    </noscript>
+                </form>
+            </div>
+        </section>
+    </main>
+
+   <footer>
+    <div class="wrap">
+        Sechaba Holdings · We are nothing without the community.
+        <br>
+        <a href="contact.html">Contact our team</a>
+        · Remote
+    </div>
+</footer>
+
+    <script>
+        const quotationForm = document.getElementById("quotation-form");
+        const submitButton = document.getElementById("submit-button");
+        const formStatus = document.getElementById("form-status");
+
+        quotationForm.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            if (submitButton.disabled) {
+                return;
+            }
+
+            if (!quotationForm.reportValidity()) {
+                return;
+            }
+
+            const formData = new FormData(quotationForm);
+
+            const name = String(formData.get("name") || "").trim();
+            const message = String(formData.get("message") || "").trim();
+
+            if (!name || !message) {
+                formStatus.className = "form-status error";
+                formStatus.textContent =
+                    "Please enter your name and project details.";
+                return;
+            }
+
+            /*
+             * This form must be deployed on Netlify with
+             * form detection enabled.
+             */
+            if (window.location.protocol === "file:") {
+                formStatus.className = "form-status error";
+                formStatus.textContent =
+                    "Online submissions are not available in this local " +
+                    "preview. Please use the published website, or email " +
+                    "sechabaholdingsltd@gmail.com directly.";
+                return;
+            }
+
+            formData.set("name", name);
+            formData.set("message", message);
+
+            submitButton.disabled = true;
+            submitButton.textContent = "Submitting...";
+            quotationForm.setAttribute("aria-busy", "true");
+
+            formStatus.className = "form-status pending";
+            formStatus.textContent = "Submitting your enquiry. Please wait.";
+
+            try {
+                const response = await fetch(
+                    quotationForm.getAttribute("action"),
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type":
+                                "application/x-www-form-urlencoded"
+                        },
+                        body: new URLSearchParams(formData).toString()
+                    }
+                );
+
+                if (!response.ok) {
+                    throw new Error("Form submission failed.");
+                }
+
+                formStatus.className = "form-status success";
+                formStatus.textContent =
+                    "Your enquiry has been submitted successfully. " +
+                    "Thank you for choosing Sechaba Holdings. " +
+                    "Our team will review your project details " +
+                    "and contact you using the information provided.";
+
+                quotationForm.reset();
+            } catch (error) {
+                formStatus.className = "form-status error";
+                formStatus.textContent =
+                    "We could not confirm your submission. " +
+                    "Please try again, or contact us directly at " +
+                    "sechabaholdingsltd@gmail.com or 073 669 9341. " +
+                    "Your form details have been kept so you can retry.";
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = "Submit";
+                quotationForm.removeAttribute("aria-busy");
+            }
+        });
+    </script>
+</body>
+</html>
